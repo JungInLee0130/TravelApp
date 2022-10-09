@@ -1,6 +1,6 @@
 package com.example.travelapi.app.dto;
 
-import com.example.travelapi.posts.Posts;
+import com.example.travelapi.domain.posts.Posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,12 +8,12 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class PostsSaveRequestDto {
+
     private String title;
     private String content;
     private String author;
 
     @Builder
-
     public PostsSaveRequestDto(String title, String content, String author) {
         this.title = title;
         this.content = content;
