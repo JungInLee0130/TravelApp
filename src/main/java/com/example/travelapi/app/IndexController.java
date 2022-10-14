@@ -1,6 +1,7 @@
 package com.example.travelapi.app;
 
 import com.example.travelapi.app.dto.PostsResponseDto;
+import com.example.travelapi.config.auth.LoginUser;
 import com.example.travelapi.config.auth.dto.SessionUser;
 import com.example.travelapi.service.posts.PostsService;
 import lombok.RequiredArgsConstructor;
@@ -20,10 +21,10 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
         //index.mustache userName 사용가능 코드
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        //SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
