@@ -1,4 +1,4 @@
-package com.example.travelapi.web;
+package com.example.travelapi.app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
