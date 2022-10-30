@@ -29,6 +29,14 @@ dependencies {
     // 세션 저장소로 데이터베이스 이용: 로그인 요청마다 DB IO가 발생하지만 비용이 적게들고 현재 운영하려는 서비스 형태가 작음.
     implementation 'org.springframework.session:spring-session-jdbc'
 
+    //retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    //요청,응답 객체를 파싱해주는 라이브러리(gson을 이용함)
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    //선택사항 : http 통신 로그를 출력한다
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+
+
     testImplementation 'junit:junit:4.13.1'
     testImplementation 'junit:junit:4.13.1'
     // test를 위한 gradle을 추가
