@@ -1,6 +1,7 @@
 package com.example.travelapi.app.dto;
 
 import com.example.travelapi.domain.posts.Posts;
+import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +10,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PostsSaveRequestDto {
 
+    @SerializedName("title")
     private String title;
+    @SerializedName("content")
     private String content;
+    @SerializedName("author")
     private String author;
 
     @Builder
